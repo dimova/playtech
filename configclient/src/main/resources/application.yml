@@ -1,0 +1,17 @@
+server:
+  port: 8082
+spring:
+  application:
+        name: configclient
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: config-client-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      missing-topics-fatal: false
+      ack-count:
+
+

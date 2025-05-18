@@ -1,0 +1,78 @@
+# Software Engineering Interview Task: Configuration Management Service
+
+## Task Overview
+
+Build a Configuration Management Service that allows teams to manage and distribute application configurations across a microservices ecosystem.
+
+Do as much simpler as you can. No need to be really useful applications, but just to cover as much as possible of the subjects below. 
+If possible implement in 3-4 stages with each improving the applications with more functionalities.
+
+## Technical Requirements
+
+- Java 21+
+- Spring Boot 3.2+
+- Gradle 8.0+
+- PostgresSQL 15+
+- Kafka
+- Redis
+
+## Core Functionality
+
+### 1. Configuration Management API
+
+- Create RESTful endpoints for CRUD operations on configurations
+
+
+### 2. Configuration Publication
+
+
+- Publish configuration updates to Kafka topics
+
+
+### 3. Client SDK
+
+- Develop a Java client library for applications to consume configurations
+
+
+## Technical Challenges to Address
+
+### Data Model Design
+
+- Design an efficient schema for storing configurations
+- Implement proper indexing for fast retrieval
+
+### Performance
+
+- Implement caching strategies for frequently accessed configurations
+- Optimize database queries for large configuration sets
+- Configure connection pooling appropriately
+
+### Resilience
+
+- Implement retry mechanisms for failed Kafka publications
+- Handle Redis failover scenarios
+
+## Deliverables
+
+1. Source code in a Git repository
+2. API documentation using Swagger/OpenAPI
+3. Database schema migration scripts
+4. Docker Compose setup for local development and testing
+5. Basic integration tests
+
+## Evaluation Criteria
+
+- Code quality and organization
+- System design decisions
+- Performance optimization techniques
+- Error handling and system resilience
+- Testing approach
+- Documentation quality
+- Effectiveness of local Docker Compose setup
+
+## Additional considerations
+
+- Adding observability with metrics, logs, and traces
+- Supporting configuration templates
+- Creating a simplified local development environment with Docker Compose profiles
+

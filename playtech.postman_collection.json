@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "ab6e5aee-6a55-4fa1-9dda-6719177b3ac4",
+		"name": "playtech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "67826"
+	},
+	"item": [
+		{
+			"name": "getByUserService",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/configs?serviceName=user-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configs"
+					],
+					"query": [
+						{
+							"key": "serviceName",
+							"value": "user-service"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"6f1f8f52-4e6c-4b3b-bd5b-31f994e212ab\",\r\n  \"serviceName\": \"user-service\",\r\n  \"key\": \"feature.login.enabled\",\r\n  \"value\": \"true\",\r\n  \"createdAt\": \"2025-05-16T12:30:45Z\",\r\n  \"updatedAt\": \"2025-05-16T12:35:20Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/configs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "173f2656-1c74-4a8b-a8c6-b809e39c5a27",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/configs/173f2656-1c74-4a8b-a8c6-b809e39c5a27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configs",
+						"173f2656-1c74-4a8b-a8c6-b809e39c5a27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateById",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "173f2656-1c74-4a8b-a8c6-b809e39c5a27",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"key\": \"feature.login.enabled\",\r\n  \"value\": \"false\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/configs/173f2656-1c74-4a8b-a8c6-b809e39c5a27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configs",
+						"173f2656-1c74-4a8b-a8c6-b809e39c5a27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id",
+						"value": "173f2656-1c74-4a8b-a8c6-b809e39c5a27",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"key\": \"feature.login.enabled\",\r\n  \"value\": \"false\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/configs/173f2656-1c74-4a8b-a8c6-b809e39c5a27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configs",
+						"173f2656-1c74-4a8b-a8c6-b809e39c5a27"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
